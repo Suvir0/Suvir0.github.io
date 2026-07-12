@@ -12,15 +12,15 @@ export default function ProjectsPage() {
     <main id="main-content">
       <header className="page-hero dense-page-hero section-shell projects-index-hero">
         <div>
-          <p className="eyebrow">Projects / 2023—Present</p>
-          <h1>Work that connects code to operation.</h1>
+          <p className="eyebrow">Projects / 2023-Present</p>
+          <h1>Selected software and infrastructure projects.</h1>
         </div>
         <div className="page-lead">
           <p>
             A curated set of projects that taught me about interaction design,
             architecture, deployment, security, integration, and maintenance.
           </p>
-          <p>No vanity metrics, automated repository feeds, or unfinished filler.</p>
+          <p>Each entry covers the problem, implementation, and lessons from operating the result.</p>
         </div>
       </header>
 

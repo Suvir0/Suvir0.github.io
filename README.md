@@ -54,4 +54,4 @@ to use that custom domain and its GitHub Actions publishing source.
 
 Do not add private hostnames, IP addresses, administration URLs, credentials,
 live infrastructure status, or detailed diagrams of the real network. Omit
-unverified metrics and unavailable links instead of adding placeholders.
+unverified metrics and unavailable links. Do not add placeholders.

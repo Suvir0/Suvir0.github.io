@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://suvirp.me"),
   title: {
-    default: "Suvir Potdar — Software, Infrastructure & AI",
-    template: "%s — Suvir Potdar",
+    default: "Suvir Potdar | Software, Infrastructure & AI",
+    template: "%s | Suvir Potdar",
   },
   description:
     "Portfolio of Suvir Potdar, a New Jersey student developer building software, self-hosted infrastructure, automation, and AI-assisted engineering workflows.",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://suvirp.me",
     siteName: "Suvir Potdar",
-    title: "Suvir Potdar — Software, Infrastructure & AI",
+    title: "Suvir Potdar | Software, Infrastructure & AI",
     description:
       "Student engineer building practical software, infrastructure, automation, and AI-assisted workflows.",
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Suvir Potdar — Software, Infrastructure, AI",
+        alt: "Suvir Potdar, Software, Infrastructure, and AI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suvir Potdar — Software, Infrastructure & AI",
+    title: "Suvir Potdar | Software, Infrastructure & AI",
     description:
       "Student engineer building practical software, infrastructure, automation, and AI-assisted workflows.",
     images: ["/og.png"],

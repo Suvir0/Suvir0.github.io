@@ -23,11 +23,11 @@ export default function Home() {
         <section className="hero home-hero section-shell" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">Student engineer · Class of 2027 · New Jersey</p>
-            <h1 id="hero-title">I build systems from first line to steady state.</h1>
+            <h1 id="hero-title">I build software, deploy it, and keep it running.</h1>
             <p className="hero-intro">
               I’m Suvir Potdar, a high school student working across software,
-              infrastructure, cybersecurity, and AI—from application logic to
-              deployment, identity, networking, and operation.
+              infrastructure, cybersecurity, and AI. My work covers application
+              logic, deployment, identity, networking, and operation.
             </p>
             <div className="hero-actions" aria-label="Primary actions">
               <Link className="primary-action" href="/projects">Explore projects <Arrow /></Link>
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
 
           <div className="hero-system home-system" aria-label="A conceptual map of Suvir's engineering interests">
-            <div className="system-heading"><span>Operating range</span><span>01—08</span></div>
+            <div className="system-heading"><span>Operating range</span><span>01-08</span></div>
             <div className="system-map">
               {["Applications", "AI workflows", "Linux", "Containers", "Identity", "Networking", "Monitoring", "Cloud"].map((label, index) => (
                 <div className="system-node" key={label}>
@@ -55,7 +55,7 @@ export default function Home() {
         <section className="section-shell home-section" aria-labelledby="selected-work-title">
           <div className="compact-section-head">
             <div><span>01</span><p>Selected work</p></div>
-            <h2 id="selected-work-title">Proof, not a technology wall.</h2>
+            <h2 id="selected-work-title">Selected projects with clear technical depth.</h2>
             <Link className="text-action" href="/projects">View all projects <Arrow /></Link>
           </div>
           <div className="compact-project-grid">
@@ -80,7 +80,7 @@ export default function Home() {
         <section className="section-shell home-section home-engineering" aria-labelledby="engineering-proof-title">
           <div className="compact-section-head">
             <div><span>02</span><p>Engineering</p></div>
-            <h2 id="engineering-proof-title">The work begins before deployment—and continues after it.</h2>
+            <h2 id="engineering-proof-title">I work across development, deployment, security, and operations.</h2>
             <Link className="text-action" href="/engineering">Engineering practice <Arrow /></Link>
           </div>
           <div className="engineering-proof-grid">
@@ -92,8 +92,8 @@ export default function Home() {
             <div className="proof-copy">
               <p>
                 Operating my own infrastructure has made networking, identity,
-                observability, recovery, and documentation part of how I think
-                about software—not tasks saved for someone else.
+                observability, recovery, and documentation part of how I plan
+                software from the beginning.
               </p>
               <dl>
                 <div><dt>Environment</dt><dd>Linux · Containers · Cloud</dd></div>

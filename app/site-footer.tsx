@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="footer-contact section-shell">
         <div>
           <p className="eyebrow">Available for the right opportunity</p>
-          <h2>Let’s build something useful.</h2>
+          <h2>Open to internships and technical collaboration.</h2>
         </div>
         <div className="footer-contact-copy">
           <p>

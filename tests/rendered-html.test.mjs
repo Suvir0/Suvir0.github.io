@@ -31,19 +31,19 @@ test("server-renders Suvir's portfolio", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Suvir Potdar — Software, Infrastructure &amp; AI<\/title>/i);
-  assert.match(html, /I build systems from first line to steady state/);
+  assert.match(html, /<title>Suvir Potdar \| Software, Infrastructure &amp; AI<\/title>/i);
+  assert.match(html, /I build software, deploy it, and keep it running/);
   assert.match(html, /GuessThatStat/);
   assert.match(html, /Infrastructure Lab/);
-  assert.match(html, /Let’s build something useful/);
+  assert.match(html, /Open to internships and technical collaboration/);
   assert.match(html, /application\/ld\+json/);
 });
 
 test("server-renders the new primary pages", async () => {
   const routes = [
-    ["/about", /Curious about the entire system/],
+    ["/about", /Software makes more sense when you understand the system around it/],
     ["/engineering", /Build\. Deploy\. Secure\. Operate/],
-    ["/projects", /Work that connects code to operation/],
+    ["/projects", /Selected software and infrastructure projects/],
     ["/resume", /Download PDF/],
   ];
 

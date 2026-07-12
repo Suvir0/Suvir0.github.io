@@ -564,7 +564,7 @@ h3 {
 
 .tech-list li::before,
 .coursework-list li::before {
-  content: "— ";
+  content: "· ";
   color: var(--rule-strong);
 }
 
@@ -1597,7 +1597,7 @@ h3 {
 }
 
 .capability-matrix article li::before {
-  content: "— ";
+  content: "· ";
   color: var(--rule-strong);
 }
 
@@ -1704,7 +1704,7 @@ h3 {
 }
 
 .dense-project-tech li::before {
-  content: "— ";
+  content: "· ";
   color: var(--rule-strong);
 }
 

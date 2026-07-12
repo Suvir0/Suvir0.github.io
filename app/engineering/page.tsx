@@ -13,7 +13,7 @@ export default function EngineeringPage() {
       <header className="page-hero dense-page-hero section-shell engineering-page-hero">
         <div>
           <p className="eyebrow">Engineering / Infrastructure practice</p>
-          <h1>From source code to a maintained system.</h1>
+          <h1>How I build and operate systems.</h1>
         </div>
         <div className="page-lead">
           <p>
@@ -22,8 +22,8 @@ export default function EngineeringPage() {
             observed, updated, and protected.
           </p>
           <p>
-            A self-hosted infrastructure lab gives me a place to learn those
-            responsibilities continuously rather than treating deployment as a final step.
+            A self-hosted infrastructure lab gives me regular practice with
+            deployment, access control, monitoring, maintenance, and recovery.
           </p>
         </div>
       </header>
@@ -41,7 +41,7 @@ export default function EngineeringPage() {
             <div className="dense-section-label"><span>01</span><p>Conceptual system</p></div>
             <div className="split-content-head">
               <h2 id="system-title">A simplified path from request to operation.</h2>
-              <p>This is a conceptual learning model, not a diagram of any live network or private topology.</p>
+              <p>This diagram shows the general model I use for learning. It does not represent my live network or private topology.</p>
             </div>
             <div className="dense-pipeline" aria-label="Simplified conceptual infrastructure diagram">
               {[
@@ -70,10 +70,10 @@ export default function EngineeringPage() {
           <section id="lab" className="dense-content-section" aria-labelledby="lab-title">
             <div className="dense-section-label"><span>03</span><p>Infrastructure Lab</p></div>
             <div className="split-content-head">
-              <h2 id="lab-title">A system that keeps teaching.</h2>
+              <h2 id="lab-title">Personal infrastructure lab.</h2>
               <div>
                 <p>The environment includes virtualized and containerized workloads, centralized identity concepts, private networking, reverse proxying, DNS management, monitoring, and cloud-connected services.</p>
-                <p>Unlike a one-time classroom project, it requires ongoing planning, diagnosis, updates, documentation, and recovery thinking.</p>
+                <p>Running the lab requires ongoing planning, diagnosis, updates, documentation, and recovery work.</p>
                 <Link className="text-action" href="/projects/infrastructure-lab">Read the case study <span aria-hidden="true">↗</span></Link>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function EngineeringPage() {
               <li><span>01</span><div><h3>Minimize unnecessary exposure.</h3><p>Prefer private access, deliberate identity boundaries, and narrowly scoped administration paths.</p></div></li>
               <li><span>02</span><div><h3>Observe before guessing.</h3><p>Use logs, metrics, health signals, and dependency checks to narrow a failure before changing configuration.</p></div></li>
               <li><span>03</span><div><h3>Document for the next incident.</h3><p>Record architecture and operational decisions so future maintenance starts with context.</p></div></li>
-              <li><span>04</span><div><h3>Plan for recovery.</h3><p>Treat backups, rollback paths, and reproducible deployment as part of the system rather than optional cleanup.</p></div></li>
+              <li><span>04</span><div><h3>Plan for recovery.</h3><p>Include backups, rollback paths, and reproducible deployment in the original system design.</p></div></li>
             </ol>
           </section>
         </div>

@@ -62,18 +62,18 @@ export const projects: Project[] = [
     href: "https://gts.suvir.net",
     hrefLabel: "Open live application",
     challenge:
-      "Make statistics review feel less like a worksheet without hiding the reasoning that makes each answer useful.",
+      "Create an engaging statistics review experience that keeps the reasoning behind each answer visible.",
     approach:
       "I designed a short interaction loop: present a focused question, evaluate the response, explain the result, and move the learner forward while preserving a clear sense of progress.",
     decisions: [
       "Keep feedback immediate so mistakes become part of the learning loop.",
-      "Use explicit progression and scoring state rather than disconnected question screens.",
+      "Track question progression and scoring in one consistent state model.",
       "Prioritize a fast, browser-based experience that classmates could use without setup.",
     ],
     lessons: [
       "Peer feedback reveals interaction problems that are easy to miss while building alone.",
       "Reliable state transitions matter as much as visual design in an educational tool.",
-      "A small, deployed product can be more valuable than a larger unfinished idea.",
+      "Shipping a focused product for classmates taught me to value completion and direct feedback.",
     ],
   },
   {
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     title: "Infrastructure Lab",
     category: "Infrastructure · Security · Networking",
     status: "Ongoing",
-    year: "2023—Present",
+    year: "2023-Present",
     summary:
       "A maintained environment for learning virtualization, containers, identity, networking, monitoring, and secure service operation.",
     description:
@@ -103,11 +103,11 @@ export const projects: Project[] = [
       "I treat the environment as a continuously evolving lab: isolate workloads, document access paths, centralize identity where appropriate, monitor health, and make changes with recovery in mind.",
     decisions: [
       "Separate services into virtualized or containerized workloads according to their operational needs.",
-      "Use private networking and centralized identity concepts instead of exposing administration surfaces.",
-      "Build monitoring and documentation alongside deployment rather than after problems appear.",
+      "Keep administration surfaces behind private networking and deliberate access controls.",
+      "Add monitoring and documentation during deployment.",
     ],
     lessons: [
-      "Deployment is an ongoing engineering responsibility, not a final button press.",
+      "Operating a service requires regular updates, observation, and maintenance.",
       "Most failures cross boundaries between configuration, networking, storage, and permissions.",
       "Simple diagrams and accurate runbooks reduce the cost of future troubleshooting.",
     ],
@@ -141,9 +141,9 @@ export const projects: Project[] = [
       "Verify output before cleanup and isolate external systems behind testable adapters.",
     ],
     lessons: [
-      "Integration work is mostly about defining failure behavior and trustworthy boundaries.",
+      "Clear boundaries and explicit failure handling made the integrations easier to test and maintain.",
       "Idempotency and deduplication become essential when jobs can overlap or restart.",
-      "Operational safeguards are product features, even when users rarely notice them.",
+      "Preflight checks, disk guards, and deduplication became essential parts of the workflow.",
     ],
   },
 ];
@@ -165,7 +165,7 @@ export const skillGroups = [
 
 export const experiences: Experience[] = [
   {
-    period: "2023—Present",
+    period: "2023-Present",
     title: "Infrastructure engineering",
     context: "Personal Infrastructure Lab · Self-directed",
     summary:
