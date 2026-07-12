@@ -1,6 +1,6 @@
 # Suvir Potdar Portfolio
 
-Personal portfolio for [suvir.net](https://suvir.net), built with React,
+Personal portfolio for [suvirp.me](https://suvirp.me), built with React,
 TypeScript, vinext, and custom CSS.
 
 ## Local development
@@ -18,6 +18,7 @@ Useful checks:
 npm run lint
 npx tsc --noEmit
 npm test
+npm run build:pages
 ```
 
 ## Updating content
@@ -39,12 +40,15 @@ that filename. Verify `/resume` after replacement.
 
 ## Publishing
 
-Run `npm run build` before publishing. The Sites project association is stored
-in `.openai/hosting.json`; do not replace its `project_id` when saving a new
-version of the existing site.
+`npm run build:pages` creates the static `out/` artifact used by GitHub Pages.
+Pushes to `main` deploy that artifact through `.github/workflows/pages.yml`.
 
-The initial deployment is private for content review. Promote access or connect
-the final custom domain only after the copy and résumé have been approved.
+`npm run build` continues to validate the Sites-compatible build. The Sites
+project association is stored in `.openai/hosting.json`; do not replace its
+`project_id` when saving a new version of the existing site.
+
+The public production domain is `suvirp.me`. GitHub Pages must remain configured
+to use that custom domain and its GitHub Actions publishing source.
 
 ## Content safety
 

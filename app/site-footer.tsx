@@ -27,7 +27,7 @@ export function SiteFooter() {
       <div className="site-footer section-shell">
         <p>© {new Date().getFullYear()} Suvir Potdar</p>
         <p>Designed and operated by Suvir.</p>
-        <p>React · TypeScript · Sites</p>
+        <p>React · TypeScript · GitHub Pages</p>
       </div>
     </footer>
   );

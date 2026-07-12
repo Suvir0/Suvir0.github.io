@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
@@ -15,14 +14,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "suvir.net";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
-  const requestOrigin = new URL(`${protocol}://${host}`);
-
-  return {
-  metadataBase: requestOrigin,
+export const metadata: Metadata = {
+  metadataBase: new URL("https://suvirp.me"),
   title: {
     default: "Suvir Potdar — Software, Infrastructure & AI",
     template: "%s — Suvir Potdar",
@@ -43,12 +36,12 @@ export async function generateMetadata(): Promise<Metadata> {
     "New Jersey",
     "Class of 2027",
   ],
-  authors: [{ name: "Suvir Potdar", url: "https://suvir.net" }],
+  authors: [{ name: "Suvir Potdar", url: "https://suvirp.me" }],
   creator: "Suvir Potdar",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: requestOrigin,
+    url: "https://suvirp.me",
     siteName: "Suvir Potdar",
     title: "Suvir Potdar — Software, Infrastructure & AI",
     description:
@@ -69,8 +62,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Student engineer building practical software, infrastructure, automation, and AI-assisted workflows.",
     images: ["/og.png"],
   },
-  };
-}
+};
 
 export default function RootLayout({
   children,

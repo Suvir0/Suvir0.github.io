@@ -37,7 +37,7 @@ export const profile = {
   initials: "SP",
   location: "South Brunswick, New Jersey",
   graduationYear: 2027,
-  email: "suvir@suvir.net",
+  email: "hello@suvir.net",
   github: "https://github.com/Suvir0",
   linkedin: "https://www.linkedin.com/in/suvir-p/",
   availability: {
