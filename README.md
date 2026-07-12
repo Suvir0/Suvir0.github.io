@@ -31,6 +31,9 @@ Most personal content lives in `app/content.ts`:
 Homepage narrative, education, and experience copy lives in `app/page.tsx`.
 Visual tokens and responsive rules live in `app/globals.css`.
 
+The primary site routes are `/`, `/about`, `/projects`, `/engineering`, and
+`/resume`. Project case studies continue to use `/projects/[slug]`.
+
 To update the résumé, replace `public/suvir-potdar-resume.pdf` while keeping
 that filename. Verify `/resume` after replacement.
 

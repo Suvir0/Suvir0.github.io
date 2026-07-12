@@ -4,13 +4,13 @@ import test from "node:test";
 
 const templateRoot = new URL("../", import.meta.url);
 
-async function render() {
+async function render(path = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", {
+    new Request(`http://localhost${path}`, {
       headers: { accept: "text/html" },
     }),
     {
@@ -37,6 +37,21 @@ test("server-renders Suvir's portfolio", async () => {
   assert.match(html, /Infrastructure Lab/);
   assert.match(html, /Let’s build something useful/);
   assert.match(html, /application\/ld\+json/);
+});
+
+test("server-renders the new primary pages", async () => {
+  const routes = [
+    ["/about", /Curious about the entire system/],
+    ["/engineering", /Build\. Deploy\. Secure\. Operate/],
+    ["/projects", /Work that connects code to operation/],
+    ["/resume", /Download PDF/],
+  ];
+
+  for (const [path, expected] of routes) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    assert.match(await response.text(), expected, path);
+  }
 });
 
 test("removes starter preview code and keeps the resume available", async () => {

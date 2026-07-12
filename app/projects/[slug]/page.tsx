@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <main id="main-content">
-      <header className="page-hero section-shell case-hero">
+      <header className="page-hero dense-page-hero section-shell case-hero dense-case-hero">
         <div>
           <p className="eyebrow">{project.index} / {project.category}</p>
           <h1>{project.title}</h1>
@@ -80,4 +80,3 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     </main>
   );
 }
-

@@ -1,8 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navigation = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/engineering", label: "Engineering" },
+  { href: "/resume", label: "Résumé" },
+];
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
+  function isActive(href: string) {
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  }
+
   function toggleTheme() {
     const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = next;
@@ -18,12 +33,15 @@ export function SiteHeader() {
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <Link href="/#about">About</Link>
-          <Link href="/#work">Work</Link>
-          <Link href="/#engineering">Engineering</Link>
-          <Link href="/#experience">Experience</Link>
-          <Link href="/#contact">Contact</Link>
-          <Link href="/resume">Résumé</Link>
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="header-actions">
@@ -41,12 +59,15 @@ export function SiteHeader() {
           <details className="mobile-menu">
             <summary aria-label="Open navigation">Menu</summary>
             <nav aria-label="Mobile navigation">
-              <Link href="/#about">About</Link>
-              <Link href="/#work">Work</Link>
-              <Link href="/#engineering">Engineering</Link>
-              <Link href="/#experience">Experience</Link>
-              <Link href="/#contact">Contact</Link>
-              <Link href="/resume">Résumé</Link>
+              {navigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </details>
         </div>

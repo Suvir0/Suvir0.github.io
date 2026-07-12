@@ -18,6 +18,20 @@ export type Project = {
   lessons: string[];
 };
 
+export type Experience = {
+  period: string;
+  title: string;
+  context: string;
+  summary: string;
+  details: string[];
+};
+
+export type CapabilityGroup = {
+  label: string;
+  summary: string;
+  items: string[];
+};
+
 export const profile = {
   name: "Suvir Potdar",
   initials: "SP",
@@ -149,3 +163,70 @@ export const skillGroups = [
   },
 ];
 
+export const experiences: Experience[] = [
+  {
+    period: "2023—Present",
+    title: "Infrastructure engineering",
+    context: "Personal Infrastructure Lab · Self-directed",
+    summary:
+      "Design and maintain a self-hosted environment for virtualization, containers, identity, networking, monitoring, and secure service deployment.",
+    details: [
+      "Operate Linux-based virtual machines and containers across self-hosted and cloud-connected environments.",
+      "Configure DNS, TLS, reverse proxies, private networking, and remote access.",
+      "Build monitoring dashboards and investigate failures involving dependencies, storage, permissions, and configuration.",
+    ],
+  },
+  {
+    period: "2025",
+    title: "Developer",
+    context: "GuessThatStat · Student project",
+    summary:
+      "Designed and shipped an interactive statistics practice application, then refined the product based on feedback from classmates.",
+    details: [
+      "Implemented question progression, answer evaluation, score tracking, and immediate feedback.",
+      "Structured the frontend in TypeScript and deployed it for use outside a local environment.",
+      "Used peer feedback to clarify the interaction and study flow.",
+    ],
+  },
+];
+
+export const coursework = [
+  "AP Calculus BC",
+  "AP Statistics",
+  "AP Physics C: Mechanics",
+  "AP Physics C: E&M",
+  "AP Computer Science A",
+  "AP English Language",
+];
+
+export const capabilityGroups: CapabilityGroup[] = [
+  {
+    label: "Build",
+    summary: "Turn a defined problem into a working application or automation workflow.",
+    items: ["Python", "TypeScript", "Java", "HTML / CSS", "REST APIs", "Automation", "Git"],
+  },
+  {
+    label: "Deploy",
+    summary: "Move software beyond a development machine with repeatable infrastructure.",
+    items: ["Linux", "Docker", "Virtual machines", "Containers", "Cloud infrastructure", "Reverse proxies", "DNS", "TLS"],
+  },
+  {
+    label: "Secure",
+    summary: "Design access deliberately and minimize unnecessary exposure.",
+    items: ["OAuth 2.0", "OpenID Connect", "Single sign-on", "Private networking", "Access control", "Identity management"],
+  },
+  {
+    label: "Operate",
+    summary: "Keep systems understandable after deployment and diagnose what changes over time.",
+    items: ["Grafana", "Metrics", "Dashboards", "Alerting", "Logs", "Troubleshooting", "Updates", "Documentation"],
+  },
+];
+
+export const interests = [
+  "Aerospace engineering",
+  "Physics",
+  "Formula 1",
+  "Basketball",
+  "Soccer",
+  "UFC",
+];
